@@ -3,6 +3,7 @@
 PATH=$PATH:/usr/local/bin
 
 cp ../configs/mysql/my.cnf /etc/;
+systemctl restart mysqld
 
 MYSQL='mysql --skip-column-names -uroot -p'Justnewpassword1!''
 
