@@ -1,6 +1,6 @@
 #!/bin/bash
 
-yum install -y {jnet,h,io,if,a}top iptraf nmon
+yum install -y {jnet,h,io,if,a}top iptraf nmon wget
 wget https://github.com/prometheus/prometheus/releases/download/v2.34.0/prometheus-2.34.0.linux-amd64.tar.gz
 wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz
 tar xzvf node_exporter-*.t*gz
