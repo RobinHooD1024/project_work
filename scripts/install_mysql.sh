@@ -7,5 +7,6 @@ yum --enablerepo=mysql80-community install mysql-community-server
 systemctl start mysqld
 systemctl enable mysqld
 grep "A temporary password" /var/log/mysqld.log
+mysql_secure_installation
 
 
