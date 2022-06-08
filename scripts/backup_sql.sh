@@ -4,7 +4,7 @@
 
 PATH=$PATH:/usr/local/bin
 
-DIR=`date +"%Y-%m-%d"`
+DIR=`/root/backup/date +"%Y-%m-%d"`
 
 MYSQL='mysql --skip-column-names -uroot -p'Justnewpassword1!''
 
