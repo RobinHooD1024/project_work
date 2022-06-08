@@ -7,8 +7,8 @@ systemctl restart mysqld
 
 MYSQL='mysql --skip-column-names -uroot -p'Justnewpassword1!''
 
-$MYSQL -e "CREATE USER repl@'%' IDENTIFIED WITH 'caching_sha2_password' BY 'slaveTestPassword3%'; "
-$MYSQL -e "GRANT REPLICATION SLAVE ON *.* TO repl@'%'; "
-$MYSQL -e "SELECT User, Host FROM mysql.user; "
-$MYSQL -e "SHOW MASTER STATUS; "
-
+$MYSQL -e "CHANGE MASTER TO MASTER_HOST='45.33.87.57', MASTER_USER='repl', MASTER_PASSWORD='slaveTestPassword3%', MASTER_LOG_FILE='binlog.000001', MASTER_LOG_POS=1330, GET_MASTER_PUBLIC_KEY = 1;"
+$MYSQL -e "START SLAVE; "
+$MYSQL -e "SHOW SLAVE STATUS\G; "
+ 
+sss
