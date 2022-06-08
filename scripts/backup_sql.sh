@@ -4,10 +4,10 @@
 
 PATH=$PATH:/usr/local/bin
 
-DIR=`/root/backup/date +"%Y-%m-%d"`
+DIR=`date +"%Y-%m-%d"`
 
 MYSQL='mysql --skip-column-names -uroot -p'Justnewpassword1!''
-
+mkdir /root/backup; cd /root/backup;
 mkdir $DIR; cd $DIR;
 
 $MYSQL -e "STOP SLAVE;"
